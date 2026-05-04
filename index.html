@@ -1,160 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="SFSZp7TsAWRnKLWHyEbR26D8e6eDTAxl0e3DKe9gcL0" />
-    <title>Developer Portfolio</title>
+    <meta name="description" content="Latest AI News 2026: Stay updated with the forefront of Artificial Intelligence, AGI breakthroughs, AI in medicine, and the future of work.">
+    <title>Latest AI News 2026 - Professional AI News & Research Portal</title>
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #38bdf8;
-            --card-bg: #1e293b;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .typewriter {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            min-height: 1.6em;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        section {
-            margin-bottom: 6rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #334155;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border-color: var(--accent-color);
-        }
-
-        .card h3 {
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-
-        footer {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: var(--text-secondary);
-            border-top: 1px solid #334155;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-        }
+        :root { --bg-main: #0f172a; --bg-card: #1e293b; --text-main: #f8fafc; --text-muted: #94a3b8; --accent: #3b82f6; --border: #334155; }
+        body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: var(--bg-main); color: var(--text-main); line-height: 1.6; }
+        header { position: sticky; top: 0; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 100; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 1.5rem; font-weight: 500; }
+        nav a:hover { color: var(--accent); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; background: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: border-color 0.2s; }
+        .hero:hover { border-color: var(--accent); }
+        .hero img { width: 100%; height: 100%; object-fit: cover; min-height: 350px; }
+        .hero-content { padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
+        h1 { font-size: 2.5rem; margin-top: 0; line-height: 1.2; }
+        h2 { font-size: 1.8rem; margin-top: 2rem; margin-bottom: 1rem; color: #f8fafc; }
+        p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; }
+        .list-view { display: flex; flex-direction: column; gap: 1.5rem; }
+        .list-item { display: flex; gap: 1.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; align-items: center; transition: border-color 0.2s; text-decoration: none; color: inherit; }
+        .list-item:hover { border-color: var(--accent); }
+        .list-item img { width: 250px; height: 180px; object-fit: cover; border-radius: 6px; }
+        .list-content { flex: 1; }
+        .list-content h2 { margin: 0 0 0.5rem 0; font-size: 1.5rem; }
+        .list-content p { color: var(--text-muted); margin: 0 0 1rem 0; }
+        .chart-container { margin-top: 4rem; padding: 2rem; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); }
+        @media (max-width: 768px) { .hero { grid-template-columns: 1fr; } .list-item { flex-direction: column; } .list-item img { width: 100%; height: 200px; } header { flex-direction: column; gap: 1rem; } nav a { margin: 0 0.75rem; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Creative Developer</h1>
-        <div class="typewriter" id="typewriter"></div>
+        <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent);">AI Portal 2026</div>
+        <nav>
+            <a href="#">AI News</a>
+            <a href="#">Tech Trends</a>
+            <a href="#">Robotics</a>
+        </nav>
     </header>
-
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I build modern, high-performance web applications with a focus on clean code and exceptional user experience. Passionate about transforming complex problems into elegant digital solutions.</p>
-        </section>
+        <a href="agi.html" style="text-decoration: none; color: inherit;">
+            <section class="hero">
+                <div class="hero-content">
+                    <span style="color: var(--accent); text-transform: uppercase; font-size: 0.875rem; letter-spacing: 1px; font-weight: bold; margin-bottom: 0.5rem; display: block;">Breaking News</span>
+                    <h1>The Rise of AGI: OpenAI's Latest Model Breaks Human Reasoning Records</h1>
+                    <p>May 4, 2026 — In a historic milestone for artificial intelligence, the newly released model has demonstrated unprecedented capabilities, outperforming expert human reasoning across multiple complex domains.</p>
+                    <span style="display: inline-block; margin-top: 1.5rem; color: var(--accent); font-weight: bold;">Read Full Story &rarr;</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80" alt="AGI Breakthrough">
+            </section>
+        </a>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Project Alpha</h3>
-                    <p>A high-performance data visualization dashboard built with React and D3.js.</p>
+        <h2 style="border-bottom: 2px solid var(--border); padding-bottom: 0.5rem;">Recent Posts</h2>
+        <div class="list-view">
+            <a href="medicine.html" class="list-item">
+                <img src="https://images.unsplash.com/photo-1576086208226-724e584f6764?auto=format&fit=crop&w=400&q=80" alt="AI in Medicine">
+                <div class="list-content">
+                    <span style="color: var(--accent); text-transform: uppercase; font-size: 0.75rem; font-weight: bold; display: block; margin-bottom: 0.5rem;">Tech Trends</span>
+                    <h2>AI in Medicine: How Neural Networks are Curing Rare Diseases in 2026</h2>
+                    <p>May 2, 2026 — Deep learning algorithms have successfully identified curative pathways for three major rare diseases, marking a paradigm shift in personalized healthcare.</p>
+                    <span style="color: var(--accent); font-weight: bold;">Read Article &rarr;</span>
                 </div>
-                <div class="card">
-                    <h3>Project Beta</h3>
-                    <p>Real-time collaborative workspace using WebSockets and Node.js.</p>
+            </a>
+            <a href="work.html" class="list-item">
+                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=400&q=80" alt="Future of Work">
+                <div class="list-content">
+                    <span style="color: var(--accent); text-transform: uppercase; font-size: 0.75rem; font-weight: bold; display: block; margin-bottom: 0.5rem;">AI News</span>
+                    <h2>The Future of Work: 5 AI Skills That Will Be High-Paying This Decade</h2>
+                    <p>May 1, 2026 — As automation scales, human-AI collaboration skills are fetching premium salaries. Here are the top 5 skills you need to thrive in the new economy.</p>
+                    <span style="color: var(--accent); font-weight: bold;">Read Article &rarr;</span>
                 </div>
-                <div class="card">
-                    <h3>Project Gamma</h3>
-                    <p>AI-powered content management system with automated SEO optimization.</p>
-                </div>
-            </div>
+            </a>
+        </div>
+
+        <section class="chart-container">
+            <h2>Global AI Adoption Rate (2020-2026)</h2>
+            <svg viewBox="0 0 800 300" style="width: 100%; height: auto; margin-top: 1rem;">
+                <defs>
+                    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#3b82f6" />
+                        <stop offset="100%" stop-color="#8b5cf6" />
+                    </linearGradient>
+                </defs>
+                <g stroke="#334155" stroke-width="1">
+                    <line x1="50" y1="250" x2="750" y2="250" />
+                    <line x1="50" y1="50" x2="50" y2="250" />
+                </g>
+                <path d="M 50 250 L 150 220 L 250 200 L 350 150 L 450 100 L 550 80 L 650 40 L 750 20" fill="none" stroke="url(#lineGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <circle cx="50" cy="250" r="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+                <circle cx="150" cy="220" r="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+                <circle cx="250" cy="200" r="6" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+                <circle cx="350" cy="150" r="6" fill="#1e293b" stroke="#4f46e5" stroke-width="2"/>
+                <circle cx="450" cy="100" r="6" fill="#1e293b" stroke="#6366f1" stroke-width="2"/>
+                <circle cx="550" cy="80" r="6" fill="#1e293b" stroke="#7c3aed" stroke-width="2"/>
+                <circle cx="650" cy="40" r="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+                <circle cx="750" cy="20" r="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+                
+                <text x="50" y="270" fill="#94a3b8" font-size="12" text-anchor="middle">2020</text>
+                <text x="350" y="270" fill="#94a3b8" font-size="12" text-anchor="middle">2023</text>
+                <text x="750" y="270" fill="#94a3b8" font-size="12" text-anchor="middle">2026</text>
+                <text x="30" y="25" fill="#94a3b8" font-size="12" text-anchor="end">100%</text>
+                <text x="30" y="255" fill="#94a3b8" font-size="12" text-anchor="end">0%</text>
+            </svg>
         </section>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Developer Portfolio | Built with Gemini CLI</p>
-    </footer>
-
-    <script>
-        const text = "Designing the future, one line of code at a time.";
-        const typewriter = document.getElementById('typewriter');
-        let i = 0;
-
-        function type() {
-            if (i < text.length) {
-                typewriter.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, 100);
-            }
-        }
-
-        window.onload = type;
-    </script>
 </body>
 </html>
