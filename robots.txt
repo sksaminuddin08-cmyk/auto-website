@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /*.html
 
 Sitemap: https://sks-auto-site.pages.dev/sitemap.xml
